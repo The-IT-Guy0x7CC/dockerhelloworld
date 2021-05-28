@@ -1,0 +1,25 @@
+{% extends "base.html.j2" %}
+{% block content %}
+  <div class="container-fluid" style="width:600px;">
+      <h1>Save Training</h1>
+      <form action="/api/training/save" method="POST">
+        <div class="form-group">
+          <label for="name">Class Name</label>
+          <input type='text' class="form-control" name='name' id="name" placeholder="Enter Name"/>
+        </div>
+        <div class="form-group">
+          <label for="instructor">Class instructor</label>
+          <input type='text' class="form-control" name='instructor' id="instructor" placeholder="Enter instructor"/>
+        </div>
+        <div class="form-group">
+          <label for="duration">Class duration</label>
+          <input type='text' class="form-control" name='duration' id="duration" placeholder="Enter duration"/>
+        </div>
+        <div class="form-group">
+          <label for="content">Class content</label>
+          <input type='text' class="form-control" name='content' id="content" placeholder="Enter content"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+{% endblock %}

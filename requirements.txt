@@ -1,0 +1,6 @@
+pytest==3.10.1
+flake8
+pylint
+mypy
+pytest-mock
+Flask

@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% block content %}
+{% if results == 'true' %}
+<div class="alert alert-success" style="margin-top:10px">
+  <strong>Success!</strong> {{trainings|length}} results have been found.
+</div>
+{% endif %}
+  <table class="table">
+    <thead>
+      <th scope="col">Name</th>
+      <th scope="col">Instructor</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Content</th>
+    </thead>
+    <tbody>
+    {% for training in trainings %}
+      <tr>
+        <td>{{training.name}}</td>
+        <td>{{training.instructor}}</td>
+        <td>{{training.duration}}</td>
+        <td>{{training.content}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
